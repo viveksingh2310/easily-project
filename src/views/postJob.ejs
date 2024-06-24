@@ -1,0 +1,46 @@
+<div class="container">
+<form class="form" method="post" action="postJob">
+
+    <label for="designation">
+        Designation:
+    </label>
+    <input type="text" id="designation" name="designation">
+ <br>   <label for="id">Job ID:</label>
+    <input type="number" id="id" name="id"><br>
+    <label for="location">
+        Location:
+    </label>
+    <input type="text" id="location" name="location">
+<br>
+<label for="compName">
+   Company Name:
+</label>
+<input type="text" id="compName" name="compName">
+<br>
+<label for="salary">
+   Salary:
+ </label>
+ <input type="text" id="salary" name="salary">
+ <br>
+ <label for="applyBy">
+Apply By Date (in DD/MM/YYYY format):
+  </label>
+  <input type="date" id="applyBy" name="applyBy">
+  <br>
+  <label for="skillsReq">
+ Skills Required(skills should be separated by commas):
+  </label>
+  <input type="text" id="skillsReq" name="skillsReq" >
+  <br>
+  <label for="numOpening">
+Number of Openings:
+     </label>
+     <input type="number" id="numOpening" name="numOpening" >
+     <br>
+<input type="submit" value="Post">
+<input type="reset">
+
+</form>
+
+</div>
+<script src="./public/script/postJob.filter_data.js"></script>

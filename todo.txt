@@ -1,0 +1,7 @@
+1)File Upload using multer 
+2)update, delete, add jobs 
+3)retrive the applicants list of any particular job (so that the HR could view them and shorlist candidates on the skills )
+4)Adding Authentication and cookies functionality with proper logical data flow in the website 
+5)Correcting the URL mismatching in the website
+6)Improving the view of the whole website
+7)Uploading the project on Github 

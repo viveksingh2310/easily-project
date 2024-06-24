@@ -1,0 +1,38 @@
+<div class="container">
+    <form mehtod="post" action="registerApplicant" enctype="multipart/form-data" >
+        <div class="form-group">
+        <label for="appId">
+        <b>    Applicant Id:</b>
+        </label>
+        <input type="text" id="appId" name="appId" placeholder="set any number">
+        </div>
+        <div class="form-group">
+        <label for="name">
+         <b>   Name:</b>
+        </label>
+        <input type="text" id="name" name="name">
+    </div>
+    <div class="form-group">
+        <label for="email">
+         <b>   Email:</b>
+        </label>
+        <input type="email" id="email" name="email">
+    </div>
+    <div class="form-group">
+        <label for="contact">
+          <b>  Contact:</b>
+        </label>
+        <input type="text" id="contact" name="contact">
+
+    </div>
+    <div class="form-group">
+        <label for="resumePath">
+          <b>  Resume:</b><small>(Take Screenshot of the Resume and then Upload it)</small>
+        </label><br>
+        <input type="file"name="resumePath"id="resumePath" accept="images/*" />
+
+    </div>
+    <input type="submit" class="btn btn-primary"></button>
+
+    </form>
+</div>

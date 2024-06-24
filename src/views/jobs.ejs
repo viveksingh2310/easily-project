@@ -1,0 +1,69 @@
+
+<div class="container-fluid">
+    <div class="row">
+<div class="col-6">
+    <!-- this is where all the jobs are listed with their title  -->
+    <div class="container job-tiles-container">
+        <% jobs.forEach(element =>{ %>
+            <% if(element.id<=5) {%>
+<a href="/job:<%=element.id%>" id="job-tile">
+            <div class="row job-tile" style="border:2px black solid;
+            margin:10px;">
+            <div class="hidden" hidden><%=element.id %></div>
+                <h3><%=element.designation%></h3>
+                <div class="job-company">
+                  <%=element.companyName%>  
+                </div>
+                <div class="job-skills">
+                Skills:
+                    <%element.skillsReq.forEach(s=>{%> 
+                    <%=s  %>&nbsp;
+                        <% })%>
+                  </div>
+                </div></a>
+                <%} %>
+     <%   }); %>
+    </div>
+</div>
+<div class="col-6">
+    <!-- this is where all the jobs are listed with their title  -->
+    <div class="container job-tiles-container">
+        <% jobs.forEach(element =>{%>
+            <% if(element.id>5) {%>
+<a href="/job:<%=element.id%>" id="job-tile">
+            <div class="row job-tile" style="border:2px black solid;
+            margin:10px;">
+            <div class="hidden" hidden><%=element.id %></div>
+                <h3><%=element.designation%></h3>
+                <div class="job-company">
+                  <%=element.companyName%>  
+                </div>
+                <div class="job-skills">
+                Skills:
+                    <%element.skillsReq.forEach(s=>{%> 
+                    <%=s  %>&nbsp;
+                        <% })%>
+                  </div>
+                </div></a>
+                <% }%>
+     <%   }); %>
+    </div>
+</div>
+
+
+
+    </div>
+
+</div>
+<script >
+    import {Jobs} from './model/jobs.model.js';
+    var tile=document.getElementById('job-tile');
+    var desc=document.querySelector('.job-description');
+    // tile.addEventListener('')
+    tile.addEventListener('mouseover',(event)=>{
+      const jobid=tile.firstChild.innerHTML;
+      const job=Jobs.getJobById(jobid);
+      console.log(job.location);
+      desc.textContent= job.numOpening;
+    });
+</script>

@@ -1,0 +1,25 @@
+<!--job object ayega-->
+<!-- id, cat, designation, location, companyName, salary, applyBy, skillsReq, numOpening, jobPosted, applicants -->
+<!-- idhar apply button bhi hoga at the end to apply for the job  -->
+<div class="container-fluid">
+    <div class="row">
+       <h1> <%=job.designation %></h1>
+       <hr>
+       <h4><%=job.companyName %></h4><h5><b> Location:</b><%=     job.location %></h5>
+       <h5><b>Skills:</b>
+       <%job.skillsReq.forEach(skills=>{%>
+<%= skills%>
+      <% }) %></h5>
+      <h5><b> Apply By: </b><%= job.applyBy %></h5>
+      <h5><b> Applicants Applied: </b><%= job.applicants.length%></h5>
+
+    </div>
+    <div class="row job-desc">
+     <h3><u>Description</u></h3>
+      <p> <%= job.desc %></p> 
+    </div>
+    <div class="row">
+        <a href="/applicants/signin?jobId=<%=job.id%>">
+        <button class="btn btn-secondary" method="post">Apply</button></a>
+    </div>
+</div>
